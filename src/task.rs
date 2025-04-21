@@ -1,28 +1,24 @@
+
 #[derive(Debug, Clone)]
-struct Task {
-status : bool,
-description : String 
+struct Task{
+    status: String, 
+    title: String
 }
 
-#[derive(Debug)]
-pub struct TaskList{
-    tasks  : Vec<Task>
+pub struct TaskList{ list : Vec<Task>
 }
 
+impl Default for TaskList{
+    fn default() -> Self {
+        Self::new()
+    }
+}
 impl TaskList {
-    pub fn new() -> Self{
-       Self { tasks : Vec::new()} 
+    pub fn new() -> Self {
+        TaskList{list : Vec::new()}
     }
 
-    pub fn add_task(&mut self, title: &str){
-       self.tasks.push(Task {
-            status : false, 
-            description : title.to_string()
-        });
+    pub fn from_task(task : Task) -> Self{
+        TaskList{list : vec![task]}
     }
-    
-    pub fn remove_task(&mut self, title : &str){
-        todo!();
-    } 
-    
 }
