@@ -1,6 +1,18 @@
 require("liul.remap")
-require("liul.config.lazy")
-require("liul.config.options")
+-- require("liul.config.lazy")
+--require("liul.config.options")
+
+
+-- Thao (Ascii)
+local ascii_file = vim.fn.stdpath("config") .. "/Thao.txt"
+local file = io.open(ascii_file, "r")
+if file then
+	for line in file:lines() do
+		print(line)
+end
+	file:close()
+end
+
 
 print("hello from Liul! love you Thao <3")
 print("Se amable con chatGPT! Pide las cosas por favor!!")

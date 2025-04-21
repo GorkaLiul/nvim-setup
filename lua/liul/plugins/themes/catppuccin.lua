@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/liul/plugins/colorscheme.lua
-
 return {
   "catppuccin/nvim",
   name = "catppuccin",
