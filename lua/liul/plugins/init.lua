@@ -1,8 +1,7 @@
-
 return {
 -- Theme: 
-  require("liul.plugins.themes.melange"),
-
+require("liul.plugins.themes.gruvbox"),
+require("liul.plugins.themes.melange"),
   require("liul.plugins.telescope"),
   require("liul.plugins.treesitter"),
   require("liul.plugins.mason"),
@@ -17,7 +16,6 @@ return {
   require("liul.plugins.telescope_undo_tree"),
   require("liul.plugins.dashboard"),
 --require("liul.plugins.harpoon2"),
-	-- más plugins aquí ...(saludos a thao) 
 }
 
 

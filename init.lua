@@ -11,14 +11,13 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 function ColorMyPencils(color)
-	color = "catppuccin"-- color -- or "catppuccin"  
-	vim.cmd.colorscheme(color)
+	vim.cmd.colorscheme("gruvbox")
 
-	vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-	vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+--vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+--vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
 end
 
---ColorMyPencils()
+ColorMyPencils()
 
 
 

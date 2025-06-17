@@ -1,6 +1,8 @@
+require("liul.plugins")
 require("liul.remap")
--- require("liul.config.lazy")
---require("liul.config.options")
+require("liul.remap_rust")
+require("liul.config.lazy")
+require("liul.config.options")
 
 
 -- Thao (Ascii)
