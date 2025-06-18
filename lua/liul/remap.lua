@@ -6,6 +6,9 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- TELESCOLE (go to definition with gd)
+vim.keymap.set('n', '<leader>gd', '<cmd>Telescope lsp_definitions<cr>', { desc = 'Go to definitions' })
+
 -- Find files
 keymap('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
 -- Search for text in files (like grep)
