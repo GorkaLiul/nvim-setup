@@ -67,3 +67,64 @@ end, {
     silent = true,
     nowait = true
 })
+
+
+
+
+-- runs example_file with "cargo run --example <<example_file>>" using Telescope 
+vim.keymap.set('n', '<leader>cge', function()
+  if vim.fn.filereadable("Cargo.toml") == 0 then
+    vim.notify("No se encontró Cargo.toml", vim.log.levels.ERROR)
+    return
+  end
+
+  require('telescope.builtin').find_files({
+    prompt_title = "🦀 Rust Examples",
+    search_dirs = { "examples" },
+    attach_mappings = function(prompt_bufnr, map)
+      local actions = require('telescope.actions')
+      local action_state = require('telescope.actions.state')
+      
+      map('i', '<CR>', function()
+        local selection = action_state.get_selected_entry()
+        actions.close(prompt_bufnr)
+        
+        if selection then
+          local filename = vim.fn.fnamemodify(selection.value, ":t:r")
+          vim.cmd("split | terminal cargo run --example " .. filename)
+        end
+      end)
+      
+      return true
+    end,
+  })
+end, { desc = "Cargo run example (Telescope)" })
+
+-- builds example_file with "cargo build --example <<example_file>>" using Telescope 
+vim.keymap.set('n', '<leader>cbe', function()
+  if vim.fn.filereadable("Cargo.toml") == 0 then
+    vim.notify("No se encontró Cargo.toml", vim.log.levels.ERROR)
+    return
+  end
+
+  require('telescope.builtin').find_files({
+    prompt_title = "🦀 Rust Examples",
+    search_dirs = { "examples" },
+    attach_mappings = function(prompt_bufnr, map)
+      local actions = require('telescope.actions')
+      local action_state = require('telescope.actions.state')
+      
+      map('i', '<CR>', function()
+        local selection = action_state.get_selected_entry()
+        actions.close(prompt_bufnr)
+        
+        if selection then
+          local filename = vim.fn.fnamemodify(selection.value, ":t:r")
+          vim.cmd("split | terminal cargo build --example " .. filename)
+        end
+      end)
+      
+      return true
+    end,
+  })
+end, { desc = "Cargo run example (Telescope)" })
