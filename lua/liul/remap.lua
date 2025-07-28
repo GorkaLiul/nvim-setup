@@ -1,19 +1,8 @@
 -- This is to use Ex command (vim file explorer VIVA VIETNA VIVA VIETNAMM)
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
 vim.keymap.set("n", "<leader>nt", ":Neotree toggle<CR>")
->>>>>>> ae6d551 (fixed some stuff)
->>>>>>> 3c6b0e5 (minor changes)
-=======
 
->>>>>>> cc0269b92b22622bf1aeeb5019b1bb7aa2d3d342
 -- TELESCOPE
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }

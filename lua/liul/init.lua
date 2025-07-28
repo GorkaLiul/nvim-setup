@@ -15,21 +15,5 @@ end
 	file:close()
 end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+print("Loged in")
 
-print("hello from Liul! love you Thao <3")
-print("Se amable con chatGPT! Pide las cosas por favor!!")
-=======
-<<<<<<< HEAD
-
-print("hello from Liul! love you Thao <3")
-print("Se amable con chatGPT! Pide las cosas por favor!!")
-=======
->>>>>>> ae6d551 (fixed some stuff)
->>>>>>> 3c6b0e5 (minor changes)
-=======
-
-print("hello from Liul! love you Thao <3")
-print("Se amable con chatGPT! Pide las cosas por favor!!")
->>>>>>> cc0269b92b22622bf1aeeb5019b1bb7aa2d3d342

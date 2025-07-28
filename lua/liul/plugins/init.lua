@@ -15,17 +15,8 @@ require("liul.plugins.themes.melange"),
   require("liul.plugins.lualine"),
   require("liul.plugins.telescope_undo_tree"),
   require("liul.plugins.dashboard"),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  require("liul.plugins.neotree"),
 
->>>>>>> ae6d551 (fixed some stuff)
->>>>>>> 3c6b0e5 (minor changes)
-=======
->>>>>>> cc0269b92b22622bf1aeeb5019b1bb7aa2d3d342
+  require("liul.plugins.neotree"),
 --require("liul.plugins.harpoon2"),
 }
 
