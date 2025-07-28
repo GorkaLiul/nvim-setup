@@ -3,6 +3,7 @@ require("liul.config.lazy")
 print("hello")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@ vim.cmd[[colorscheme gruvbox ]]
 --
 >>>>>>> ae6d551 (fixed some stuff)
 >>>>>>> 3c6b0e5 (minor changes)
+=======
+>>>>>>> cc0269b92b22622bf1aeeb5019b1bb7aa2d3d342
 -- CONFIGURANDO EL FONDO NEGRO
 --vim.opt.background = "dark"         
 --vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")  -- Elimina el fondo (transparente)
